@@ -440,3 +440,61 @@ fieldset { border: 0; min-width: 0; }
 @media (max-width: 380px) { .gallery-back { max-width: 75px; font-size: .65rem; line-height: 1.5; } }
 
 @media (max-width: 380px) { .hero__title { font-size: clamp(2.25rem, 9.6vw, 2.6rem); } }
+/* Espaço adulto opcional: reserva editorial, sem controle de acesso. */
+.intimacy-link { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 12px; min-height: 44px;
+  margin-top: 16px; color: #f1b1c6; font-size: .8rem; text-decoration: none; }
+.intimacy-link > span:first-of-type { padding: 2px 7px; border: 1px solid #a9798a; border-radius: 4px;
+  font: 500 .62rem/1.5 var(--font-roman); }
+.intimacy-link:hover { color: #ffcada; }
+.intimacy { --intimacy-accent: #f1b1c6; padding-block: 64px; margin-top: 48px; border-top: 1px solid #f1b1c62b; }
+.intimacy--full { margin-top: 0; background: radial-gradient(ellipse at 85% 0, #5a203829, transparent 55%), #101019; }
+.intimacy__intro { display: grid; grid-template-columns: 1fr 1.12fr; gap: 48px; align-items: end; margin-bottom: 28px; }
+.intimacy .kicker { color: var(--intimacy-accent); }
+.intimacy .kicker::before { border-color: #f1b1c670; color: var(--intimacy-accent); }
+.intimacy .h-display { font-size: var(--text-2xl); margin-bottom: 0; }
+.intimacy .h-display em { color: var(--intimacy-accent); }
+.intimacy__intro .lead { font-size: .95rem; }
+.intimacy__privacy { margin-top: 16px; color: var(--color-text-muted); font-size: .74rem; line-height: 1.8; }
+.intimacy__space { border: 1px solid #a9798a; border-radius: 14px; overflow: hidden; background: #17131e; }
+.intimacy__entry { display: flex; align-items: center; gap: 18px; padding: 24px 28px; min-height: 100px;
+  cursor: pointer; list-style: none; background: linear-gradient(110deg, #33202f, #151b26); }
+.intimacy__entry::-webkit-details-marker { display: none; }
+.intimacy__entry:focus-visible { outline: 3px solid var(--intimacy-accent); outline-offset: -5px; border-radius: 12px; }
+.intimacy__entry:hover { background: linear-gradient(110deg, #45283c, #1b2938); }
+.intimacy__seal { display: grid; place-items: center; width: 48px; height: 48px; flex: none; border: 1px solid #a9798a;
+  border-radius: 50%; color: var(--intimacy-accent); font: 500 .75rem/1 var(--font-roman); }
+.intimacy__entry strong { display: block; color: var(--color-text); font: 600 1.1rem/1.3 var(--font-display); }
+.intimacy__entry-label { display: block; font-size: .75rem; color: var(--intimacy-accent); margin-top: 6px; }
+.intimacy__toggle { font: 400 1.8rem/1 var(--font-display); margin-left: auto; color: var(--intimacy-accent); }
+.intimacy__when-open { display: none; }
+.intimacy__space[open] .intimacy__when-closed { display: none; }
+.intimacy__space[open] .intimacy__when-open { display: block; }
+.intimacy__space[open] .intimacy__toggle { transform: rotate(45deg); }
+.intimacy__content { padding: 28px; border-top: 1px solid #f1b1c62b; }
+.intimacy__encounter { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px; align-items: center; }
+.intimacy__figure { min-width: 0; }
+.intimacy__figure img { display: block; width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; border-radius: 10px; border: 1px solid #ffffff26; }
+.intimacy__figure figcaption { margin-top: 10px; font-size: .64rem; color: var(--color-text-muted); }
+.intimacy__eyebrow { font: 400 .6rem/1.8 var(--font-roman); color: var(--intimacy-accent); letter-spacing: .08em; margin-bottom: 16px; }
+.intimacy__words h3 { font: 600 clamp(1.5rem, 2.2vw, 2rem)/1.15 var(--font-display); letter-spacing: -.04em; margin-bottom: 18px; }
+.intimacy__words > p:not(.intimacy__eyebrow) { font-size: .85rem; color: var(--color-text-muted); line-height: 1.9; }
+.intimacy__words > p + p { margin-top: 16px; }
+.intimacy__values { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
+.intimacy__values article { padding: 22px; border: 1px solid #f1b1c638; border-radius: 8px; background: #ffffff04; }
+.intimacy__values article > span { color: var(--intimacy-accent); font: 400 .7rem/1.4 var(--font-roman); }
+.intimacy__values h3 { margin-block: 12px 8px; font: 600 1.15rem/1.4 var(--font-display); }
+.intimacy__values p { font-size: .8rem; color: var(--color-text-muted); }
+.intimacy__closing { padding-top: 24px; margin-top: 24px; border-top: 1px solid #f1b1c62b; }
+.intimacy__closing p { color: var(--color-text-muted); font-size: .85rem; line-height: 1.9; }
+.intimacy__closing a { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; margin-top: 12px;
+  color: var(--intimacy-accent); font-size: .78rem; text-decoration: none; }
+@media (max-width: 900px) { .intimacy__encounter { grid-template-columns: minmax(0, 1fr); gap: 24px; } }
+@media (max-width: 720px) {
+  .intimacy__intro, .intimacy__values { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .intimacy__intro { gap: 20px; }
+  .intimacy__entry { padding: 20px; gap: 14px; }
+  .intimacy__content { padding: 20px; }
+  .intimacy__entry strong { font-size: 1rem; }
+  .intimacy__seal { width: 40px; height: 40px; font-size: .65rem; }
+  .intimacy__values { gap: 12px; }
+}

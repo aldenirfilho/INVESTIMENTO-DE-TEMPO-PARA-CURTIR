@@ -83,3 +83,15 @@ Reestilização de 18/10/2026: grafite, lima e ciano; tipografia Space Grotesk/M
 ![Coleção Turbo TEMI 360X](docs/preview-orbital/colecao-10-imagens.png)
 
 A revisão visual humana, a experiência em dispositivos reais e o comportamento após publicação no GitHub Pages permanecem pendentes. A branch da edição deve ser revisada antes do merge. Para reverter, reverta o commit da edição orbital e restaure os três arquivos anteriores (`index.html`, `style.css`, `app.js`); não há migração de dados.
+
+
+## Espaço reservado — Amor & intimidade · 18+
+
+Área editorial opcional na página principal e na galeria, com linguagem positiva sobre desejo, sexo, amor e reciprocidade. Os três princípios são **honra** (honestidade e acordos), **justiça** (liberdade e reciprocidade) e **consciência** (consentimento e limites).
+
+- O elemento HTML `details` inicia fechado e funciona sem JavaScript. Não há cadastro, dados íntimos, cookies ou persistência da abertura.
+- “Reservado” indica apresentação discreta: o site, o HTML e a imagem são públicos. Não existe senha, autenticação ou verificação de idade; o aviso 18+ é editorial.
+- A arte romântica apresenta casal adulto fictício, vestido, em abraço e beijo suave no cenário orbital. Os arquivos `assets/amor-intimidade-v1.webp` e `assets/amor-intimidade-v1.json` contêm a imagem e seu registro de geração/prompts; o PNG original é preservado localmente fora do versionamento público.
+- A coleção de 10 imagens e o ZIP anterior continuam separados deste complemento.
+
+Validação do complemento executada: HTMLParser verificou IDs, âncoras, assets, texto alternativo e estado inicialmente fechado nas duas páginas; hashes do WebP e original conferem. No navegador, Enter abre e Espaço fecha; a galeria aberta não apresentou overflow em 320, 390, 768 e 1280 px, e o complemento da principal foi conferido em 390 px. A arte carregou nas duas páginas. Revisão estática independente sem bloqueadores. Captura: `docs/preview-orbital/intimidade-aberta.png`. Homologação humana e publicação continuam pendentes.

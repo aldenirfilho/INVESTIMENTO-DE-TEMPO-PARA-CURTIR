@@ -1,0 +1,19 @@
+{
+  "title": "Amor & intimidade",
+  "version": 1,
+  "generator": "built-in image_gen",
+  "use_case": "stylized-concept",
+  "prompt": "Use case: stylized-concept\nAsset type: widescreen cinematic editorial website image, approximately 16:9\nPrimary request: A polished, futuristic romantic scene expressing adult love, affection, mutual respect, and elegant intimacy.\nScene/backdrop: A refined orbital terrace with a transparent balcony and an enormous glowing planet Earth in the background, subtle stars, sophisticated aerospace architecture.\nSubject: A fictional man and woman who are clearly mature adults around 35 to 40 years old, both fully dressed in elegant evening clothing. They share a gentle consensual kiss while embracing reciprocally, holding hands, relaxed affectionate body language. The woman wears a long tasteful evening dress and the man a modern tailored dark suit. They appear as unique invented characters, not any real person or celebrity.\nStyle/medium: Premium cinematic editorial concept art, realistic textures with an unmistakably imagined science-fiction setting.\nComposition/framing: Landscape 16:9, medium-wide environmental portrait of the couple and spectacular orbital landscape; heads, arms and clothing comfortably included, no focus on body parts.\nLighting/mood: Warm amber light on faces, cyan rim lighting and a subtle soft pink accent, welcoming and romantic.\nColor palette: Graphite, deep navy, cyan, amber, subtle soft rose.\nConstraints: Fully clothed adults only, tasteful non-graphic romance, one couple, no alcohol, no nudity, no sexual acts, no fetish imagery, no text, no logos, no watermark.",
+  "original": "output/artes-originais/amor-intimidade-v1.png",
+  "optimized": "assets/amor-intimidade-v1.webp",
+  "width": 1672,
+  "height": 941,
+  "original_bytes": 2683419,
+  "optimized_bytes": 392284,
+  "original_sha256": "635d46a6281c61353cf163ab8680e2e0a6b1ae6494cf20cd9356ede267b695b2",
+  "optimized_sha256": "57f689976f8c53228afd3cfd3e92b7b6a339ad8f8d3f6726c38e5a395a1adb94",
+  "visual_review": {
+    "status": "inspected",
+    "notes": "Fictional mature adults fully dressed, gentle reciprocal kiss and embrace, hands held, orbital terrace and Earth, no alcohol or text, no nudity or explicit content."
+  }
+}
