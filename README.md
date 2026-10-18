@@ -104,3 +104,19 @@ A seção 18+ destaca a dignidade de cada cônjuge ou parceiro, lealdade aos aco
 Duas artes românticas adicionais de casais adultos fictícios estão em `assets/amor-casal-masculino-v1.webp` e `assets/amor-casal-feminino-v1.webp`, com os respectivos manifestos de prompts, dimensões e hashes. Pessoas vestidas, afeto e nenhuma representação sexual explícita; originais PNG preservados localmente. A coleção original de dez imagens e seu ZIP permanecem íntegros e separados desses complementos.
 
 Validação desta inclusão: HTMLParser aprovou IDs, âncoras, alt e dimensões dos arquivos nas duas páginas; os blocos de intimidade coincidem; todos os hashes/bytes dos novos manifestos foram conferidos na revisão independente. `node --check app.js` e `git diff --check` passaram. A galeria com a seção aberta ficou sem overflow em 320, 390, 768 e 1280 px, com uma coluna para os casais no celular e duas no desktop. As três artes românticas carregaram. Os dez WebPs e o ZIP originais foram conferidos por hash/CRC, sem mudança. O CSS e o JavaScript receberam URLs versionadas para a edição orbital, evitando uso de versões anteriores em cache. Comparação visual adicional: `docs/preview-orbital/honra-diversidade.png`.
+
+## Apresentação em vídeo — Turbo TEMI 360 X
+
+A página inicial inclui o filme em `#apresentacao`, com acesso pelo hero e pela galeria, inclusive pela seção de amor e intimidade. O vídeo reúne as dez experiências e três casais diversos, com destaque à honra, ao consentimento, aos acordos e à privacidade, sem conteúdo explícito.
+
+- `assets/video/apresentacao-turbo-temi-360x-v1.mp4`: H.264/AAC, 1920 × 1080, 30 fps, 147,52 s, 37.320.185 bytes. A cópia web é 50,3% menor que o master preservado localmente e possui carregamento progressivo.
+- Player nativo com controles, reprodução no celular, `preload="none"` e início por escolha do visitante. A capa carrega sem baixar o vídeo inteiro.
+- Legendas em português gravadas no vídeo, arquivo SRT para download e roteiro completo em HTML, que funciona sem JavaScript.
+- `assets/video/manifesto-video-v1.json`: dimensões, tamanho, créditos editoriais e hashes SHA-256. Pessoas fictícias; artes e áudio gerados com IA.
+- Arquivos de produção, originais, URLs temporárias e ferramentas locais ficam fora do versionamento público. A integração não acrescenta telemetria, cookies, formulários, APIs ou provedores externos.
+
+Verificações executadas: `git diff --check` e `node --check app.js` sem erros; HTMLParser validou IDs, âncoras, recursos, textos alternativos e atributos do player; FFmpeg decodificou vídeo e áudio completos sem erros. AVFoundation confirmou Full HD, 30 fps, áudio estéreo de 48 kHz e quadros de 3, 95 e 146 segundos, com textos legíveis. No navegador, o vídeo avançou até 9,53 s, sem erro, e a apresentação ficou sem overflow horizontal em 320, 390, 768 e 1280 px. O roteiro contém 16 momentos e o player permanece parado ao abrir a página.
+
+![Apresentação incorporada ao site](docs/preview-video/apresentacao-desktop.png)
+
+Para comparar, a [abertura da edição anterior](docs/preview-orbital/depois-desktop.png) permanece disponível. A publicação do vídeo foi solicitada em 18/10/2026. Testes em dispositivos físicos e leitores de tela são complementares. A confirmação pública depende do deploy do GitHub Pages e da reprodução no endereço publicado. Reverter o commit desta integração remove o player e os assets novos, sem migração de dados.

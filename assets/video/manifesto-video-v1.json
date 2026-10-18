@@ -1,0 +1,35 @@
+{
+  "title": "Tempo de Viver 360 X — Apresentação Turbo TEMI",
+  "created": "2026-10-18",
+  "language": "pt-BR",
+  "durationSeconds": 147.52,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "codec": {
+    "video": "H.264 High, yuv420p",
+    "audio": "AAC estéreo 48 kHz"
+  },
+  "captions": "Legendas em português gravadas no vídeo; SRT separado e roteiro em HTML.",
+  "content": "10 experiências e casais diversos; honra, consentimento e respeito; sem conteúdo explícito.",
+  "credits": "Artes conceituais, pessoas fictícias, narração e música geradas com IA.",
+  "masterSha256": "4440dde4ce56654868a13744d20e62b49441e66ce925e2854244b2ce2af1e6cd",
+  "webReductionPercent": 50.3,
+  "files": [
+    {
+      "file": "apresentacao-turbo-temi-360x-v1.mp4",
+      "sizeBytes": 37320185,
+      "sha256": "5d258735c198f1a94402758722a96b3f520f8928c1d8729a989c42689e9a4875"
+    },
+    {
+      "file": "legendas-pt-br-v1.srt",
+      "sizeBytes": 2748,
+      "sha256": "b73090e6e5f1dc674abc8bbc205e55f623de1f884a4b73c275b739d444b11c10"
+    },
+    {
+      "file": "poster-apresentacao-v1.jpg",
+      "sizeBytes": 243653,
+      "sha256": "9680de5c7135070ef5a13d4fe091193f28f84d4de88a610e509e6afa1919f174"
+    }
+  ]
+}
