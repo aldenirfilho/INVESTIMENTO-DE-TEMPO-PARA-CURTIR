@@ -3,6 +3,54 @@
   'use strict';
   document.documentElement.classList.add('js');
 
+
+  /* ---------- Campo de estrelas (canvas leve, respeita reduced motion) ---------- */
+  const canvas = document.getElementById('stars');
+  if (canvas && canvas.getContext) {
+    const ctx = canvas.getContext('2d');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let stars = [], w = 0, h = 0, raf = 0;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    function resize() {
+      w = canvas.clientWidth; h = canvas.clientHeight;
+      canvas.width = w * dpr; canvas.height = h * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const n = Math.min(220, Math.round((w * h) / 9000));
+      stars = Array.from({ length: n }, () => ({
+        x: Math.random() * w, y: Math.random() * h,
+        r: Math.random() * 1.1 + 0.3,
+        a: Math.random() * 0.6 + 0.2,
+        p: Math.random() * Math.PI * 2,
+        s: Math.random() * 0.8 + 0.2,
+        c: Math.random() < 0.12 ? '212,181,106' : (Math.random() < 0.3 ? '127,178,255' : '230,235,245'),
+      }));
+      draw(0);
+    }
+    function draw(t) {
+      ctx.clearRect(0, 0, w, h);
+      for (const st of stars) {
+        const tw = reduce ? 1 : 0.65 + 0.35 * Math.sin(t / 1000 * st.s + st.p);
+        ctx.beginPath();
+        ctx.arc(st.x, st.y, st.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${st.c},${(st.a * tw).toFixed(3)})`;
+        ctx.fill();
+      }
+      // órbita sutil
+      ctx.beginPath();
+      ctx.ellipse(w * 0.5, h * 0.1, w * 0.55, h * 0.22, -0.18, 0, Math.PI * 2);
+      ctx.strokeStyle = 'rgba(212,181,106,0.05)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+      if (!reduce) raf = requestAnimationFrame(draw);
+    }
+    resize();
+    let rt;
+    window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { cancelAnimationFrame(raf); resize(); }, 150); });
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) cancelAnimationFrame(raf); else if (!reduce) raf = requestAnimationFrame(draw);
+    });
+  }
+
   /* ---------- Header / navegação ---------- */
   const header = document.querySelector('.header');
   const nav = document.querySelector('.nav');

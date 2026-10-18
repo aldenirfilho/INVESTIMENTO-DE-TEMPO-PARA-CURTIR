@@ -9,14 +9,12 @@
   <meta property="og:description" content="Dinheiro, trabalho e tecnologia a serviço de uma vida que possa ser desfrutada no presente. Bússola do viver, calculadora e piloto de 30 dias.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="./assets/hero.webp">
-  <meta name="theme-color" content="#f6f1e7">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%232f5d3a'/%3E%3Cpath d='M16 7v9l6 4' stroke='%23f6f1e7' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta name="theme-color" content="#080d1a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23080d1a' stroke='%23d4b56a' stroke-width='1.5'/%3E%3Cpath d='M16 7v9l6 4' stroke='%23d4b56a' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="image" href="./assets/hero.webp">
-  <link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,400i,700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cinzel:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./base.css">
   <link rel="stylesheet" href="./style.css">
   <script type="application/ld+json">
@@ -33,6 +31,7 @@
   </script>
 </head>
 <body>
+  <div class="starfield" aria-hidden="true"><canvas id="stars"></canvas></div>
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
   <header class="header">
@@ -55,19 +54,23 @@
     </div>
   </header>
 
+  <div class="meander" aria-hidden="true"></div>
   <main id="conteudo">
 
     <!-- ===================== HERO ===================== -->
-    <section class="hero" id="topo">
+    <section class="hero hero--center" id="topo">
       <div class="wrap">
         <div class="hero__grid">
           <div>
+            <div class="hero__emblem">
+              <svg class="emblem" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="32" cy="32" r="30"/><ellipse cx="32" cy="32" rx="30" ry="11" transform="rotate(-24 32 32)"/><ellipse cx="32" cy="32" rx="30" ry="11" transform="rotate(24 32 32)"/><circle cx="32" cy="32" r="5" fill="currentColor" stroke="none"/><path d="M20 46c4-9 8-14 12-14s8 5 12 14" /><path d="M24 20l8-6 8 6M32 14v12"/></svg>
+            </div>
             <p class="hero__meta">
-              <span>Projeto 360X</span>
+              <span>Projeto 360X · Missão Tempo</span>
               <span>Concepção: Aldenir Rocha de Oliveira Filho</span>
               <span>Versão 1 · Outubro de 2026</span>
             </p>
-            <h1 class="hero__title">Investir em <em>viver</em>, não só em acumular.</h1>
+            <h1 class="hero__title">Investir em <em>viver</em>, não só em acumular</h1>
             <p class="lead">Um projeto para colocar dinheiro, trabalho e tecnologia a serviço de uma vida que possa ser desfrutada no presente, com autonomia, saúde, prazer e vínculos humanos, sem abrir mão da proteção para o futuro.</p>
             <div class="hero__actions">
               <a class="btn btn--primary" href="#bussola">Abrir a Bússola do viver</a>
@@ -80,7 +83,7 @@
           </aside>
         </div>
         <figure class="hero__figure">
-          <img src="./assets/hero.webp" width="1536" height="1024" alt="Ilustração em guache de uma pessoa descansando numa rede entre duas árvores, com um caderno e uma xícara na grama e um vale iluminado pelo fim de tarde ao fundo." fetchpriority="high">
+          <img src="./assets/hero.webp" width="1536" height="1024" alt="Ilustração de uma colunata de mármore greco-romana em órbita sobre um planeta azul; uma pessoa em traje espacial escuro descansa sentada nos degraus, com o capacete ao lado, observando o nascer do sol sobre a curva do planeta." fetchpriority="high">
         </figure>
       </div>
     </section>
@@ -90,7 +93,7 @@
       <div class="wrap">
         <div class="manifesto">
           <div class="manifesto__sticky">
-            <p class="kicker">A ideia central</p>
+            <p class="kicker">Capítulo I · A ideia central</p>
             <h2 class="h-display">Dinheiro e tecnologia precisam <em>produzir oportunidades</em> de viver.</h2>
             <p class="lead">A mudança proposta é substituir a acumulação sem finalidade por escolhas conscientes sobre o que queremos viver, quanto precisamos para sustentar essas escolhas e quanto tempo estamos dispostos a dedicar ao trabalho.</p>
           </div>
@@ -127,36 +130,36 @@
     <!-- ===================== MÓDULOS ===================== -->
     <section class="section section--offset section--tight" id="modulos">
       <div class="wrap">
-        <p class="kicker">Estrutura</p>
+        <p class="kicker">Capítulo II · Arquitetura da missão</p>
         <h2 class="h-display">Cinco módulos, <em>um único</em> projeto.</h2>
         <p class="lead">A pessoa começa por uma ação pequena; as outras possibilidades ficam disponíveis para depois. O sistema deve exigir menos tempo de manutenção do que o tempo que ajuda a liberar.</p>
         <div class="modules reveal">
           <article class="module module--feature">
-            <span class="module__num">01</span>
+            <span class="module__num">I</span>
             <h3>Bússola do viver</h3>
             <p class="module__sub">Preferências, valores, curiosidades e limites. Saber o que preservar, o que experimentar e o que reduzir.</p>
             <p class="module__out"><strong>Entrega:</strong> uma página com o que preservar, experimentar e reduzir.</p>
           </article>
           <article class="module">
-            <span class="module__num">02</span>
+            <span class="module__num">II</span>
             <h3>Capital e tempo</h3>
             <p class="module__sub">Relacionar dinheiro, compromissos e experiências. Toda compra passa por três verificações.</p>
             <p class="module__out"><strong>Entrega:</strong> orçamento viável e períodos de tempo escolhido.</p>
           </article>
           <article class="module">
-            <span class="module__num">03</span>
+            <span class="module__num">III</span>
             <h3>Trabalho e aprendizagem</h3>
             <p class="module__sub">Autonomia sobre tarefas e horários; interesse como porta de entrada para aprender.</p>
             <p class="module__out"><strong>Entrega:</strong> um ajuste negociável e uma experiência de aprendizagem.</p>
           </article>
           <article class="module">
-            <span class="module__num">04</span>
+            <span class="module__num">IV</span>
             <h3>Viver e conviver</h3>
             <p class="module__sub">Lazer, descanso, amizade, cultura e intimidade desejada, com consentimento e dignidade.</p>
             <p class="module__out"><strong>Entrega:</strong> oportunidades acessíveis de convivência.</p>
           </article>
           <article class="module">
-            <span class="module__num">05</span>
+            <span class="module__num">V</span>
             <h3>IA e Reaverso</h3>
             <p class="module__sub">Reduzir o esforço de organizar experiências e acrescentar imaginação, sem decidir pela pessoa.</p>
             <p class="module__out"><strong>Entrega:</strong> sugestões simples, agenda assistida e narrativas opcionais.</p>
@@ -170,7 +173,7 @@
       <div class="wrap">
         <div class="compass">
           <div class="compass__intro">
-            <p class="kicker">Módulo 01 · Interativo</p>
+            <p class="kicker">Módulo I · Instrumento de bordo</p>
             <h2 class="h-display">Bússola do viver: descobrir o que <em>você</em> deseja.</h2>
             <p class="lead">A sociedade funciona melhor quando cada pessoa sabe do que gosta, porque é isso que ela fará com alegria e bem feito. A bússola começa com cinco perguntas em linguagem livre:</p>
             <ol>
@@ -263,10 +266,10 @@
       <div class="wrap">
         <div class="split">
           <figure class="split__figure split__figure--tall reveal">
-            <img src="./assets/capital-tempo.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="Ilustração de uma ampulheta de vidro: moedas douradas no bulbo superior se transformam, ao cair, em folhas verdes, barquinhos de papel e uma pequena bicicleta no bulbo inferior.">
+            <img src="./assets/capital-tempo.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="Ilustração de uma ampulheta monumental de mármore dentro de um observatório aberto às estrelas: moedas douradas na câmara superior se transformam, ao cair, em pequenas estrelas, folhas prateadas e uma pequena nave dourada.">
           </figure>
           <div>
-            <p class="kicker">Módulo 02</p>
+            <p class="kicker">Módulo II · Propulsão</p>
             <h2 class="h-display">Converter capital em <em>experiências e tempo</em>.</h2>
             <p class="lead">Os recursos se organizam pela função que cumprem na vida, não pelo produto financeiro em que estão aplicados.</p>
             <div class="table-wrap">
@@ -285,7 +288,7 @@
         </div>
 
         <div class="calc reveal" id="calc">
-          <p class="kicker">Calculadora</p>
+          <p class="kicker">Instrumento · Conversor</p>
           <h3 class="h-display" style="font-size: var(--text-xl)">Quantas horas da sua vida custa essa compra?</h3>
           <p class="muted small" style="margin-bottom: var(--space-6)">Exemplo do projeto: uma compra de R$ 600 representa 12 horas de trabalho para quem recebe R$ 50 líquidos por hora. Faça o seu. Nada sai do seu navegador.</p>
           <div class="calc__grid">
@@ -315,7 +318,7 @@
     <!-- ===================== TRABALHO E EDUCAÇÃO ===================== -->
     <section class="section" id="trabalho">
       <div class="wrap">
-        <p class="kicker">Módulo 03</p>
+        <p class="kicker">Módulo III · Tripulação</p>
         <h2 class="h-display">Trabalhar e aprender com <em>mais autonomia</em>.</h2>
         <p class="lead">Permitir que a pessoa trabalhe no que gosta, do jeito que consegue, é ponto de partida. Treinamento, capacidade, condições de trabalho e responsabilidades também entram na decisão: na saúde, interesse pessoal não substitui competência, supervisão e segurança assistencial.</p>
 
@@ -358,7 +361,7 @@
       <div class="wrap">
         <div class="split">
           <div>
-            <p class="kicker">Módulo 04</p>
+            <p class="kicker">Módulo IV · Estação de convívio</p>
             <h2 class="h-display">Vínculos, prazer e sexualidade <em>com liberdade</em>.</h2>
             <p class="lead">Sexo pode integrar uma vida boa para quem o deseja. Amizade, romance, convivência familiar e períodos sem relacionamento também podem. A natureza inspira movimento, convivência e experiência sensorial; as regras humanas se constroem com consentimento, dignidade, cuidado e consequências para as pessoas.</p>
             <div class="prose" style="margin-top: var(--space-6)">
@@ -367,7 +370,7 @@
             </div>
           </div>
           <figure class="split__figure reveal">
-            <img src="./assets/conviver.webp" width="1200" height="1200" loading="lazy" decoding="async" alt="Ilustração de cinco adultos de idades diferentes jogando um jogo de tabuleiro numa varanda ao entardecer, com luzes penduradas, um cachorro dormindo sob a mesa e um violão encostado na cadeira.">
+            <img src="./assets/conviver.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Ilustração de cinco adultos em um salão de estação espacial desenhado como um átrio romano, jogando um jogo de tabuleiro luminoso em torno de uma mesa redonda, com a Terra visível por uma grande janela.">
           </figure>
         </div>
 
@@ -385,9 +388,9 @@
         </div>
 
         <div class="prose" style="margin-top: var(--space-10); max-width: var(--content-narrow)">
-          <h3 style="margin-top:0; color: #d7b27a">Crianças e adolescentes</h3>
+          <h3 style="margin-top:0; color: var(--color-accent)">Crianças e adolescentes</h3>
           <p>A frente juvenil é de <strong>educação apropriada à idade, proteção, diálogo e acesso a orientação profissional</strong>. O programa não organiza encontros nem experimentação sexual de menores. A <a href="https://www.who.int/news-room/fact-sheets/detail/comprehensive-sexuality-education" target="_blank" rel="noopener noreferrer">OMS (atualização de 11 de março de 2026)</a> informa que educação integral em sexualidade de qualidade não aumenta a atividade sexual nem antecipa seu início, e pode apoiar comportamentos protetores. A <a href="https://unesdoc.unesco.org/ark:/48223/pf0000260770" target="_blank" rel="noopener noreferrer">UNESCO</a> oferece uma estrutura progressiva, baseada em direitos e no melhor interesse da pessoa jovem.</p>
-          <h3 style="color: #d7b27a">Como organizar oportunidades de convivência</h3>
+          <h3 style="color: var(--color-accent)">Como organizar oportunidades de convivência</h3>
           <ul>
             <li>Encontros de jogos e atividades cooperativas.</li>
             <li>Música, dança e produção artística.</li>
@@ -404,9 +407,9 @@
       <div class="wrap">
         <div class="split split--map">
           <div>
-            <p class="kicker">Módulo 05</p>
-            <h2 class="h-display">Tecnologia avançada e a <em>magia</em> do Reaverso.</h2>
-            <p class="lead">A tecnologia tem uma função concreta: diminuir o esforço necessário para organizar experiências que a pessoa deseja viver. O critério técnico é o tempo líquido devolvido, descontando o que se gasta para configurar, corrigir e manter a ferramenta.</p>
+            <p class="kicker">Módulo V · Carta celeste</p>
+            <h2 class="h-display">Tecnologia aeroespacial e a <em>magia</em> do Reaverso.</h2>
+            <p class="lead">Como numa missão espacial, cada sistema a bordo existe para uma função: aqui, diminuir o esforço necessário para organizar experiências que a pessoa deseja viver. O critério técnico é o tempo líquido devolvido, descontando o que se gasta para configurar, corrigir e manter a ferramenta.</p>
             <div class="table-wrap">
               <table class="table">
                 <thead><tr><th>Função da IA</th><th>Uso prático</th><th>Controle da pessoa</th></tr></thead>
@@ -421,8 +424,8 @@
             </div>
             <p class="small muted" style="margin-top: var(--space-5)">Compras, pagamentos, mensagens e alterações de compromissos exigem autorização da pessoa. Dados íntimos não financiam publicidade nem avaliação de trabalhadores. Realidade aumentada e ambientes imersivos ficam para etapas posteriores, quando acrescentarem valor.</p>
           </div>
-          <figure class="split__figure split__figure--tall reveal">
-            <img src="./assets/reaverso.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="Mapa de fantasia desenhado em pergaminho envelhecido: uma trilha sinuosa liga uma rosa dos ventos, uma torre com ampulheta, uma casinha com livro aberto, uma mesa redonda sob uma árvore e um portal de pedra iluminado.">
+          <figure class="split__figure split__figure--square reveal">
+            <img src="./assets/reaverso.webp" width="1200" height="1200" loading="lazy" decoding="async" alt="Carta celeste gravada em ardósia escura, no estilo dos mapas astronômicos gregos: constelações em linhas douradas formam uma rosa dos ventos, uma ampulheta, um livro aberto, uma mesa redonda e um portal em arco, ligados por uma trajetória orbital, com borda em meandro grego.">
           </figure>
         </div>
 
@@ -441,7 +444,7 @@
     <!-- ===================== SOCIEDADE ===================== -->
     <section class="section section--offset section--tight" id="sociedade">
       <div class="wrap wrap--default">
-        <p class="kicker">Escala</p>
+        <p class="kicker">Capítulo III · Órbita social</p>
         <h2 class="h-display">Como levar a proposta à <em>sociedade</em>.</h2>
         <p class="lead">A versão social precisa criar condições de acesso à vida boa, especialmente para quem tem menos renda, mobilidade, tempo ou apoio.</p>
         <div class="two-col reveal" style="margin-top: var(--space-8)">
@@ -465,13 +468,13 @@
       <div class="wrap">
         <div class="split split--reverse">
           <div>
-            <p class="kicker">Piloto</p>
+            <p class="kicker">Capítulo IV · Trinta dias de voo</p>
             <h2 class="h-display">Trinta dias para descobrir <em>duas práticas</em> que valem manter.</h2>
             <p class="lead">Objetivo: encontrar duas práticas que a pessoa deseja continuar porque favorecem descanso, prazer ou conexão e cabem em sua realidade. Gasto adicional inicial possível: R$ 0. Não é um teste clínico de longevidade.</p>
             <p class="small muted" style="margin-top: var(--space-4)">As durações são adaptáveis. Dez minutos podem ser suficientes para começar. Os períodos saem do tempo disponível ou de simplificações; o projeto não pressupõe tirar tempo de sono, cuidado ou compromissos essenciais.</p>
           </div>
           <figure class="split__figure split__figure--tall reveal">
-            <img src="./assets/piloto.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="Ilustração de mãos segurando uma caneca e um pequeno calendário de papel com trinta quadrados, alguns preenchidos com desenhos de folha, nota musical, dado e sol.">
+            <img src="./assets/piloto.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="Ilustração de mãos com luvas de astronauta apoiadas em um parapeito de mármore, segurando uma pequena tábua de ardósia com trinta quadrados gravados, alguns iluminados com símbolos dourados; ao fundo, a curva de um planeta ao amanhecer.">
           </figure>
         </div>
 
@@ -505,7 +508,7 @@
         <!-- Revisão semanal -->
         <div class="weekly" id="weekly">
           <div>
-            <p class="kicker">Indicadores</p>
+            <p class="kicker">Telemetria</p>
             <h3 class="h-display" style="font-size: var(--text-xl)">Cinco minutos por semana para perceber se está funcionando.</h3>
             <p class="small muted">Responda em palavras ou use a escala pessoal opcional. Não há pontuação global, ranking, penalidade por faltar ou obrigação de sequência diária. Nenhum indicador estima “anos de vida ganhos”: uma melhora percebida em 30 dias é sinal para continuar ou ajustar, não prova de causalidade.</p>
             <p class="small muted" style="margin-top: var(--space-4)">Se a organização aumentar o desgaste, simplifique o registro. Se o gasto comprometer obrigações, volte às opções gratuitas. Se uma interação trouxer pressão ou desconforto, interrompa e use os canais de apoio.</p>
@@ -528,7 +531,7 @@
     <!-- ===================== ERROS A EVITAR ===================== -->
     <section class="section section--offset section--tight" id="erros">
       <div class="wrap wrap--default">
-        <p class="kicker">Guarda-corpo</p>
+        <p class="kicker">Escudo térmico</p>
         <h2 class="h-display">Principais erros <em>a evitar</em>.</h2>
         <ul class="avoid" role="list">
           <li><strong>Tratar investimento financeiro como doença.</strong> A questão central é sua finalidade e seu custo de tempo, preservando proteção e escolhas.</li>
@@ -546,7 +549,7 @@
     <!-- ===================== PROMPT ===================== -->
     <section class="section section--ink" id="prompt">
       <div class="wrap wrap--default">
-        <p class="kicker">Continuidade</p>
+        <p class="kicker">Transmissão</p>
         <h2 class="h-display">Prompt para qualquer assistente de IA <em>continuar</em> o projeto.</h2>
         <p class="lead">Cole este texto no assistente de sua preferência para que ele atue dentro das regras do projeto.</p>
         <div class="prompt">
@@ -567,7 +570,7 @@ Não recomende liquidar patrimônio ou assumir dívidas para seguir o projeto. N
     <!-- ===================== REFERÊNCIAS ===================== -->
     <section class="section section--tight" id="referencias">
       <div class="wrap">
-        <p class="kicker">Fontes</p>
+        <p class="kicker">Arquivo</p>
         <h2 class="h-display">Referências <em>consultadas</em>.</h2>
         <p class="small muted">Consultadas em 18 de outubro de 2026. A literatura ajuda a desenhar e testar o projeto; ela não comprova que esta proposta, como conjunto, aumentará a expectativa de vida ou produzirá prosperidade automática.</p>
         <ol class="refs" role="list">
@@ -588,6 +591,7 @@ Não recomende liquidar patrimônio ou assumir dívidas para seguir o projeto. N
     </section>
   </main>
 
+  <div class="meander" aria-hidden="true"></div>
   <footer class="footer">
     <div class="wrap">
       <div class="footer__grid">
