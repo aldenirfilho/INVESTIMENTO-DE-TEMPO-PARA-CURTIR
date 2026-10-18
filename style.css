@@ -1033,7 +1033,7 @@ fieldset { border: 0; }
 .hero__emblem { display: flex; justify-content: center; }
 .hero--center { text-align: center; }
 .hero--center .hero__grid { grid-template-columns: minmax(0, 1fr); justify-items: center; }
-.hero--center .hero__meta { justify-content: center; }
+.hero--center .hero__meta { justify-content: center; max-width: none; width: 100%; }
 .hero--center .lead { margin-inline: auto; }
 .hero--center .hero__actions { justify-content: center; }
 .hero--center .hero__aside { max-width: 720px; margin-top: var(--space-8); padding: var(--space-6) var(--space-8); border-top: 1px solid var(--color-divider); border-bottom: 1px solid var(--color-divider); }
