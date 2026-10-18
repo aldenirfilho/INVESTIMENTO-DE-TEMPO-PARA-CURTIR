@@ -120,3 +120,19 @@ Verificações executadas: `git diff --check` e `node --check app.js` sem erros;
 ![Apresentação incorporada ao site](docs/preview-video/apresentacao-desktop.png)
 
 Para comparar, a [abertura da edição anterior](docs/preview-orbital/depois-desktop.png) permanece disponível. A publicação do vídeo foi solicitada em 18/10/2026. Testes em dispositivos físicos e leitores de tela são complementares. A confirmação pública depende do deploy do GitHub Pages e da reprodução no endereço publicado. Reverter o commit desta integração remove o player e os assets novos, sem migração de dados.
+
+## Compartilhamento Meta e créditos
+
+As duas páginas incluem Facebook, WhatsApp e Threads por links de compartilhamento. O botão **Instagram · copiar link** prepara o endereço público para uso pelo próprio visitante. **Outros aplicativos** aparece quando o navegador oferece compartilhamento nativo. Nenhum desses controles publica automaticamente nem representa um perfil oficial já criado.
+
+- `meta-social.js`: usa somente URLs e textos públicos definidos no HTML; as respostas dos formulários, o endereço local, parâmetros e informações pessoais não entram no conteúdo compartilhado.
+- A cópia informa o resultado e oferece um campo selecionável quando a área de transferência não está disponível ou a permissão é negada. Cancelar o menu nativo encerra a operação sem aviso intrusivo.
+- Os links diretos funcionam sem JavaScript. As prévias sociais possuem imagem absoluta de 1280 × 720, `og:url`, locale e URL canônica por página.
+- Sem SDK Meta, Pixel, cookies novos, login embutido, armazenamento, credenciais ou telemetria. A publicação via API e a vinculação de perfis dependem de cadastro e autorização próprios; não há perfis fictícios ou arrobas reservadas pelo site.
+- Rodapés discretos: **Idealizador: Aldenir Rocha de Oliveira Filho.** Apoio técnico e criativo: ChatGPT/Codex (OpenAI); narração e trilha: vidIQ. Encerramento: **Grato desde já.**
+
+Verificações executadas: sintaxe de `meta-social.js` e `app.js`; `git diff --check`; HTMLParser para IDs, âncoras, arquivos, créditos, metadados e parâmetros dos três links Meta. Sete cenários locais em Node/VM cobriram cópia, indisponibilidade, permissão negada, compartilhamento nativo, cancelamento, falha e DOM incompleto. No navegador, o botão do Instagram confirmou a cópia; as duas páginas ficaram sem overflow em 320, 390, 768 e 1280 px. Revisão independente sem bloqueios. Cadastro e aceite de termos das contas continuam como etapas do titular, fora do site.
+
+Referências técnicas: [compartilhamento nativo no navegador](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share) e [links de compartilhamento WhatsApp](https://faq.whatsapp.com/5913398998672934/?locale=pt_BR).
+
+![Redes e créditos discretos](docs/preview-meta/redes-creditos.png)
