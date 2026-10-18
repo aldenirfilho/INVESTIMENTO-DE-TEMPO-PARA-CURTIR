@@ -3,54 +3,6 @@
   'use strict';
   document.documentElement.classList.add('js');
 
-
-  /* ---------- Campo de estrelas (canvas leve, respeita reduced motion) ---------- */
-  const canvas = document.getElementById('stars');
-  if (canvas && canvas.getContext) {
-    const ctx = canvas.getContext('2d');
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let stars = [], w = 0, h = 0, raf = 0;
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    function resize() {
-      w = canvas.clientWidth; h = canvas.clientHeight;
-      canvas.width = w * dpr; canvas.height = h * dpr;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const n = Math.min(220, Math.round((w * h) / 9000));
-      stars = Array.from({ length: n }, () => ({
-        x: Math.random() * w, y: Math.random() * h,
-        r: Math.random() * 1.1 + 0.3,
-        a: Math.random() * 0.6 + 0.2,
-        p: Math.random() * Math.PI * 2,
-        s: Math.random() * 0.8 + 0.2,
-        c: Math.random() < 0.12 ? '212,181,106' : (Math.random() < 0.3 ? '127,178,255' : '230,235,245'),
-      }));
-      draw(0);
-    }
-    function draw(t) {
-      ctx.clearRect(0, 0, w, h);
-      for (const st of stars) {
-        const tw = reduce ? 1 : 0.65 + 0.35 * Math.sin(t / 1000 * st.s + st.p);
-        ctx.beginPath();
-        ctx.arc(st.x, st.y, st.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${st.c},${(st.a * tw).toFixed(3)})`;
-        ctx.fill();
-      }
-      // órbita sutil
-      ctx.beginPath();
-      ctx.ellipse(w * 0.5, h * 0.1, w * 0.55, h * 0.22, -0.18, 0, Math.PI * 2);
-      ctx.strokeStyle = 'rgba(212,181,106,0.05)';
-      ctx.lineWidth = 1;
-      ctx.stroke();
-      if (!reduce) raf = requestAnimationFrame(draw);
-    }
-    resize();
-    let rt;
-    window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { cancelAnimationFrame(raf); resize(); }, 150); });
-    document.addEventListener('visibilitychange', () => {
-      if (document.hidden) cancelAnimationFrame(raf); else if (!reduce) raf = requestAnimationFrame(draw);
-    });
-  }
-
   /* ---------- Header / navegação ---------- */
   const header = document.querySelector('.header');
   const nav = document.querySelector('.nav');
@@ -61,17 +13,29 @@
   window.addEventListener('scroll', onScroll, { passive: true });
 
   if (toggle && nav) {
+    const setMenuOpen = (open) => {
+      nav.setAttribute('data-open', String(open));
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    };
+
+    setMenuOpen(false);
     toggle.addEventListener('click', () => {
       const open = nav.getAttribute('data-open') === 'true';
-      nav.setAttribute('data-open', String(!open));
-      toggle.setAttribute('aria-expanded', String(!open));
+      setMenuOpen(!open);
     });
     nav.querySelectorAll('a').forEach((a) =>
-      a.addEventListener('click', () => {
-        nav.setAttribute('data-open', 'false');
-        toggle.setAttribute('aria-expanded', 'false');
-      })
+      a.addEventListener('click', () => setMenuOpen(false))
     );
+    document.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Escape' && nav.getAttribute('data-open') === 'true') {
+        setMenuOpen(false);
+        toggle.focus();
+      }
+    });
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1100) setMenuOpen(false);
+    }, { passive: true });
   }
 
   /* Seção atual no menu */
@@ -217,7 +181,10 @@
       }
       note.textContent = 'Sugestões geradas aqui mesmo, no seu navegador, a partir do que você marcou. Nada é enviado nem guardado. Escolha uma, ignore as outras ou peça de novo.';
       results.hidden = false;
-      results.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      results.scrollIntoView({
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+        block: 'nearest',
+      });
     });
 
     document.getElementById('compass-again')?.addEventListener('click', () => {

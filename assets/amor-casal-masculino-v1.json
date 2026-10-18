@@ -1,0 +1,19 @@
+{
+  "title": "Amor entre homens · honra e reciprocidade",
+  "version": 1,
+  "generator": "built-in image_gen",
+  "use_case": "stylized-concept",
+  "prompt": "Use case: stylized-concept.\nAsset type: premium cinematic website image, widescreen 16:9, approximately 1792x1024.\nPrimary request: affectionate fictional adult male couple honoring their bond, illustrated with natural realistic detail for the \"Turbo TEMI 360 X\" orbital lifestyle visual universe. No lettering.\nScene/backdrop: elegant orbital observation garden, glass panoramic windows revealing Earth and stars, lush discreet plants, graphite architecture and graceful aerospace arcs.\nSubjects: two fictional men clearly adults around 30-45 years, distinct individual appearances and tasteful different elegant casual styles, one with slightly wavy dark hair and warm medium skin wearing a deep navy jacket, the other with short curly hair and darker skin wearing an ivory shirt with graphite trousers. Both completely clothed. They hold hands, share a reciprocal embrace, gently rest their foreheads together, smiling warmly. Tenderness, commitment, reciprocity and dignity. Natural anatomy and hands.\nComposition: waist-up medium wide cinematic composition showing both fully framed from mid-thigh upward with the orbital garden and Earth around them; calm, elegant and youthful, emotionally sincere.\nLighting/mood: soft cyan rim lighting, warm amber glow and subtle soft rose accents; premium modern aerospace, romantic, hopeful.\nConstraints: adults only, no text, no logos, no watermark, no alcohol, no nudity, no sexual act, no erotic body-part emphasis, no stereotypes. Intimacy conveyed only through affectionate touch and eye contact.",
+  "original": "output/artes-originais/amor-casal-masculino-v1.png",
+  "optimized": "assets/amor-casal-masculino-v1.webp",
+  "width": 1659,
+  "height": 948,
+  "original_bytes": 2430679,
+  "optimized_bytes": 285160,
+  "original_sha256": "5df3d6290dcb8538f618d7854b5357935e317b9719d18cb1d7430e28ba27f25b",
+  "optimized_sha256": "903363e04d334b225308f73a2726492b6ea3fc2fcbd1022949fdae48bfb2c60f",
+  "visual_review": {
+    "status": "inspected",
+    "notes": "PNG original e WebP inspecionados: dois homens fictícios adultos totalmente vestidos, mãos dadas e abraço recíproco, testas encostadas, jardim orbital e Terra. Sem texto, álcool, nudez ou conteúdo sexual explícito. Conversão WebP sem crop ou alteração de dimensões."
+  }
+}

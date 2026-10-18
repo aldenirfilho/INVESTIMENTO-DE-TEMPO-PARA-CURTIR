@@ -8,15 +8,15 @@
   <meta property="og:title" content="Tempo de Viver 360X">
   <meta property="og:description" content="Dinheiro, trabalho e tecnologia a serviço de uma vida que possa ser desfrutada no presente. Bússola do viver, calculadora e piloto de 30 dias.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="./assets/hero.webp">
-  <meta name="theme-color" content="#080d1a">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23080d1a' stroke='%23d4b56a' stroke-width='1.5'/%3E%3Cpath d='M16 7v9l6 4' stroke='%23d4b56a' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta property="og:image" content="./assets/mission-orbit-v2.webp">
+  <meta name="theme-color" content="#090c10">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23090c10'/%3E%3Cellipse cx='20' cy='20' rx='16' ry='7' transform='rotate(-40 20 20)' fill='none' stroke='%23c6f36b' stroke-width='2'/%3E%3Cpath d='m20 9 7 22-7-4-7 4z' fill='%23f4f7f8'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image" href="./assets/hero.webp">
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cinzel:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="./assets/mission-orbit-v2.webp">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./base.css">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css?v=orbital-20261018-3">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -31,60 +31,91 @@
   </script>
 </head>
 <body>
-  <div class="starfield" aria-hidden="true"><canvas id="stars"></canvas></div>
+  <div class="starfield" aria-hidden="true"></div>
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
   <header class="header">
     <div class="wrap header__inner">
-      <a class="brand" href="#topo">Tempo de Viver <span>360X</span></a>
+      <a class="brand" href="#topo" aria-label="Tempo de Viver 360X — início">
+        <svg class="brand__symbol" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true"><ellipse cx="20" cy="20" rx="18" ry="8" transform="rotate(-40 20 20)" stroke="currentColor" stroke-width="1.5"/><path d="m20 8 7 23-7-4-7 4 7-23Z" fill="currentColor"/></svg>
+        <span class="brand__name">TEMPO DE VIVER<span class="brand__edition">PROJETO <b>360X</b></span></span>
+      </a>
       <button class="nav__toggle" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
       <nav class="nav" id="nav" aria-label="Seções">
         <ul role="list">
-          <li><a href="#ideia">A ideia</a></li>
-          <li><a href="#bussola">Bússola</a></li>
-          <li><a href="#capital">Capital e tempo</a></li>
-          <li><a href="#conviver">Conviver</a></li>
+          <li><a href="#ideia">A missão</a></li>
+          <li><a href="#galeria">Galeria 360X</a></li>
+          <li><a href="#capital">Capital &amp; tempo</a></li>
           <li><a href="#reaverso">Reaverso</a></li>
-          <li><a href="#piloto">Piloto 30 dias</a></li>
-          <li><a href="#referencias">Fontes</a></li>
+          <li><a href="#piloto">Plano de voo</a></li>
+          <li><a class="nav__cta" href="#bussola">Iniciar jornada <span aria-hidden="true">↗</span></a></li>
         </ul>
       </nav>
     </div>
   </header>
-
-  <div class="meander" aria-hidden="true"></div>
   <main id="conteudo">
 
-    <!-- ===================== HERO ===================== -->
-    <section class="hero hero--center" id="topo">
+    <!-- ===================== HERO / MISSÃO 360X ===================== -->
+    <section class="hero" id="topo" aria-labelledby="hero-title">
       <div class="wrap">
+        <div class="mission-bar">
+          <p><span class="status-dot" aria-hidden="true"></span> EXPLORAÇÃO HUMANA · PROJETO 360X</p>
+          <p class="mission-bar__edition">TEMI 360X <span>/</span> EDIÇÃO ORBITAL</p>
+        </div>
         <div class="hero__grid">
-          <div>
-            <div class="hero__emblem">
-              <svg class="emblem" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="32" cy="32" r="30"/><ellipse cx="32" cy="32" rx="30" ry="11" transform="rotate(-24 32 32)"/><ellipse cx="32" cy="32" rx="30" ry="11" transform="rotate(24 32 32)"/><circle cx="32" cy="32" r="5" fill="currentColor" stroke="none"/><path d="M20 46c4-9 8-14 12-14s8 5 12 14" /><path d="M24 20l8-6 8 6M32 14v12"/></svg>
-            </div>
-            <p class="hero__meta">
-              <span>Projeto 360X · Missão Tempo</span>
-              <span>Concepção: Aldenir Rocha de Oliveira Filho</span>
-              <span>Versão 1 · Outubro de 2026</span>
-            </p>
-            <h1 class="hero__title">Investir em <em>viver</em>, não só em acumular</h1>
-            <p class="lead">Um projeto para colocar dinheiro, trabalho e tecnologia a serviço de uma vida que possa ser desfrutada no presente, com autonomia, saúde, prazer e vínculos humanos, sem abrir mão da proteção para o futuro.</p>
+          <div class="hero__copy">
+            <p class="hero__meta"><span class="tiny-cross" aria-hidden="true">✳</span> O FUTURO COMEÇA NO SEU PRESENTE</p>
+            <h1 class="hero__title" id="hero-title">Seu tempo.<br>Sua vida.<br><em>Novas órbitas.</em></h1>
+            <p class="hero__subtitle">Invista em viver.</p>
+            <p class="lead">Dinheiro, trabalho e tecnologia a serviço de uma vida com mais autonomia, descobertas e conexões. O próximo grande passo pode começar com dez minutos.</p>
             <div class="hero__actions">
-              <a class="btn btn--primary" href="#bussola">Abrir a Bússola do viver</a>
-              <a class="btn btn--ghost" href="#piloto">Ver o piloto de 30 dias</a>
+              <a class="btn btn--primary" href="#bussola">Encontrar minha direção <span aria-hidden="true">↗</span></a>
+              <a class="hero__secondary" href="#modulos">Explorar a missão <span aria-hidden="true">↓</span></a>
+            </div>
+            <div class="hero__stats" aria-label="Estrutura do projeto">
+              <div><strong>05<span> / </span></strong><span>Módulos conectados</span></div>
+              <div><strong>30<span> dias</span></strong><span>Para experimentar</span></div>
+              <div><strong>01<span> vida</span></strong><span>A sua. Do seu jeito.</span></div>
             </div>
           </div>
-          <aside class="hero__aside">
-            <p>A pergunta que orienta tudo: <em>que vida os nossos recursos estão permitindo viver agora, e preservar para depois?</em></p>
-            <p>Acumular sem finalidade troca anos de presença por um saldo que talvez não haja tempo de usar. A proposta aqui é inverter a ordem: primeiro decidir o que se quer viver, depois quanto é preciso para sustentar isso, e só então quanto tempo vale a pena entregar ao trabalho.</p>
-          </aside>
+          <figure class="mission-visual">
+            <img src="./assets/mission-orbit-v2.webp" width="1536" height="1024" alt="Astronauta em uma plataforma de observação espacial, contemplando a curvatura azul da Terra e a luz do amanhecer." fetchpriority="high">
+            <div class="mission-visual__top" aria-hidden="true"><span><i class="status-dot"></i> PERSPECTIVA ORBITAL</span><span>360X / 01</span></div>
+            <div class="mission-visual__orbit" aria-hidden="true"></div>
+            <figcaption class="mission-visual__caption"><span>DESTINO: UMA VIDA BEM VIVIDA</span><strong>Existe um universo<br>além do automático.</strong><span class="mission-visual__coordinates">PRESENÇA + PROPÓSITO + LIBERDADE <span aria-hidden="true">↗</span></span></figcaption>
+            <span class="mission-visual__edge" aria-hidden="true">EXPLORE · DESCUBRA · VIVA</span>
+          </figure>
         </div>
-        <figure class="hero__figure">
-          <img src="./assets/hero.webp" width="1536" height="1024" alt="Ilustração de uma colunata de mármore greco-romana em órbita sobre um planeta azul; uma pessoa em traje espacial escuro descansa sentada nos degraus, com o capacete ao lado, observando o nascer do sol sobre a curva do planeta." fetchpriority="high">
-        </figure>
+        <div class="launchpad" aria-label="Acessos rápidos">
+          <p class="launchpad__label"><span aria-hidden="true">↳</span> ESCOLHA SEU<br>PONTO DE PARTIDA</p>
+          <a href="#bussola"><span class="launchpad__num">01</span><span><strong>Encontre sua direção</strong><small>Bússola do viver</small></span><span class="launchpad__arrow" aria-hidden="true">↗</span></a>
+          <a href="#calc"><span class="launchpad__num">02</span><span><strong>Dê valor ao seu tempo</strong><small>Conversor de dinheiro em horas</small></span><span class="launchpad__arrow" aria-hidden="true">↗</span></a>
+          <a href="#piloto"><span class="launchpad__num">03</span><span><strong>Faça o primeiro movimento</strong><small>Seu piloto de 30 dias</small></span><span class="launchpad__arrow" aria-hidden="true">↗</span></a>
+        </div>
+        <aside class="mission-note">
+          <p class="mission-note__label">NOSSA FILOSOFIA <span aria-hidden="true">✦</span></p>
+          <div><h2>Investir em viver, não só em acumular.</h2><p>Que vida os nossos recursos estão permitindo viver agora, e preservar para depois? A proposta é inverter a ordem: primeiro decidir o que se quer viver, depois quanto é preciso para sustentar isso, e só então quanto tempo vale a pena entregar ao trabalho.</p></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section life-section" id="galeria" aria-labelledby="life-heading">
+      <div class="wrap">
+        <div class="life-intro"><div><p class="kicker">TURBO TEMI 360X · EXPERIÊNCIAS</p><h2 class="h-display" id="life-heading">Vida em alta.<br><em>Consciência no comando.</em></h2></div><div><p class="lead">Emoção, adrenalina e gente de verdade na sua vida. Curtir com presença, honra, justiça e respeito. Sem precisar de álcool.</p><a class="hero__secondary" href="./galeria.html">Explorar as 10 imagens <span aria-hidden="true">↗</span></a></div></div>
+        <div class="life-grid life-grid--preview"><article class="life-card">
+      <a class="life-card__image" href="./assets/turbo-360x/01-karting.webp" target="_blank" rel="noopener" aria-label="Abrir imagem: Adrenalina com jogo limpo"><img src="./assets/turbo-360x/01-karting.webp" width="1672" height="941" loading="lazy" decoding="async" alt="Amigos adultos em karts em um circuito fechado, usando capacetes e equipamentos de proteção."><span aria-hidden="true">↗</span></a>
+      <div class="life-card__body"><p class="life-card__tag">01 / EMOÇÃO + RESPEITO</p><h3>Adrenalina com jogo limpo</h3><p>Acelerar em circuito fechado. Celebrar juntos, com proteção e respeito a quem divide a pista.</p></div>
+    </article><article class="life-card">
+      <a class="life-card__image" href="./assets/turbo-360x/02-celebracao.webp" target="_blank" rel="noopener" aria-label="Abrir imagem: A festa é estar presente"><img src="./assets/turbo-360x/02-celebracao.webp" width="1672" height="941" loading="lazy" decoding="async" alt="Amigos adultos celebram em um terraço espacial, com copos de bebidas de frutas sem álcool e a Terra ao fundo."><span aria-hidden="true">↗</span></a>
+      <div class="life-card__body"><p class="life-card__tag">02 / CONEXÃO + CONSCIÊNCIA</p><h3>A festa é estar presente</h3><p>Dança, risadas e brindes sem álcool. Curtir a noite com liberdade para escolher e energia para lembrar.</p></div>
+    </article><article class="life-card">
+      <a class="life-card__image" href="./assets/turbo-360x/03-surf.webp" target="_blank" rel="noopener" aria-label="Abrir imagem: Na mesma onda"><img src="./assets/turbo-360x/03-surf.webp" width="1672" height="941" loading="lazy" decoding="async" alt="Grupo de adultos com pranchas de surf em uma praia ao amanhecer, acompanhado por instrutor."><span aria-hidden="true">↗</span></a>
+      <div class="life-card__body"><p class="life-card__tag">03 / NATUREZA + PARCERIA</p><h3>Na mesma onda</h3><p>O mar, a turma e uma nova descoberta. Aprender junto, respeitar os limites e sentir cada momento.</p></div>
+    </article></div>
+        <p class="life-disclosure">Artes conceituais geradas com IA · Pessoas fictícias · Widescreen · Respeite seus limites e escolha experiências com preparo.</p>
+        <a class="intimacy-link" href="#amor-intimidade">Amor &amp; intimidade <span>18+</span> <span aria-hidden="true">↗</span></a>
       </div>
     </section>
 
@@ -135,32 +166,32 @@
         <p class="lead">A pessoa começa por uma ação pequena; as outras possibilidades ficam disponíveis para depois. O sistema deve exigir menos tempo de manutenção do que o tempo que ajuda a liberar.</p>
         <div class="modules reveal">
           <article class="module module--feature">
-            <span class="module__num">I</span>
-            <h3>Bússola do viver</h3>
+            <span class="module__num">01 <span aria-hidden="true">↗</span></span>
+            <h3><a href="#bussola">Bússola do viver</a></h3>
             <p class="module__sub">Preferências, valores, curiosidades e limites. Saber o que preservar, o que experimentar e o que reduzir.</p>
             <p class="module__out"><strong>Entrega:</strong> uma página com o que preservar, experimentar e reduzir.</p>
           </article>
           <article class="module">
-            <span class="module__num">II</span>
-            <h3>Capital e tempo</h3>
+            <span class="module__num">02 <span aria-hidden="true">↗</span></span>
+            <h3><a href="#capital">Capital e tempo</a></h3>
             <p class="module__sub">Relacionar dinheiro, compromissos e experiências. Toda compra passa por três verificações.</p>
             <p class="module__out"><strong>Entrega:</strong> orçamento viável e períodos de tempo escolhido.</p>
           </article>
           <article class="module">
-            <span class="module__num">III</span>
-            <h3>Trabalho e aprendizagem</h3>
+            <span class="module__num">03 <span aria-hidden="true">↗</span></span>
+            <h3><a href="#trabalho">Trabalho e aprendizagem</a></h3>
             <p class="module__sub">Autonomia sobre tarefas e horários; interesse como porta de entrada para aprender.</p>
             <p class="module__out"><strong>Entrega:</strong> um ajuste negociável e uma experiência de aprendizagem.</p>
           </article>
           <article class="module">
-            <span class="module__num">IV</span>
-            <h3>Viver e conviver</h3>
+            <span class="module__num">04 <span aria-hidden="true">↗</span></span>
+            <h3><a href="#conviver">Viver e conviver</a></h3>
             <p class="module__sub">Lazer, descanso, amizade, cultura e intimidade desejada, com consentimento e dignidade.</p>
             <p class="module__out"><strong>Entrega:</strong> oportunidades acessíveis de convivência.</p>
           </article>
           <article class="module">
-            <span class="module__num">V</span>
-            <h3>IA e Reaverso</h3>
+            <span class="module__num">05 <span aria-hidden="true">↗</span></span>
+            <h3><a href="#reaverso">IA e Reaverso</a></h3>
             <p class="module__sub">Reduzir o esforço de organizar experiências e acrescentar imaginação, sem decidir pela pessoa.</p>
             <p class="module__out"><strong>Entrega:</strong> sugestões simples, agenda assistida e narrativas opcionais.</p>
           </article>
@@ -402,6 +433,51 @@
       </div>
     </section>
 
+
+    <section class="section intimacy intimacy--full" id="amor-intimidade" aria-labelledby="intimacy-title">
+      <div class="wrap">
+      <div class="intimacy__intro">
+        <div><p class="kicker">ESPAÇO RESERVADO · 18+</p><h2 class="h-display" id="intimacy-title">Amor, desejo<br>e <em>intimidade.</em></h2></div>
+        <div><p class="lead">Desejo, sexo e amor também merecem tempo. Um encontro pode ser uma das formas mais intensas de curtir a vida quando há vontade de ambos, presença e reciprocidade.</p><p class="intimacy__privacy">Área discreta em site público, sem senha ou controle de acesso. A abertura é opcional; nenhuma escolha é salva.</p></div>
+      </div>
+      <details class="intimacy__space">
+        <summary class="intimacy__entry"><span class="intimacy__seal" aria-hidden="true">18+</span><span><strong>Amor &amp; intimidade</strong><span class="intimacy__entry-label intimacy__when-closed">Abrir espaço adulto</span><span class="intimacy__entry-label intimacy__when-open">Fechar espaço adulto</span></span><span class="intimacy__toggle" aria-hidden="true">+</span></summary>
+        <div class="intimacy__content">
+          <div class="intimacy__encounter">
+            <figure class="intimacy__figure"><img src="./assets/amor-intimidade-v1.webp" width="1672" height="941" loading="lazy" decoding="async" alt="Casal fictício de adultos, vestido com roupas de noite, compartilha um abraço e um beijo suave em uma varanda futurista com a Terra ao fundo."><figcaption>Arte romântica gerada com IA · Pessoas adultas fictícias.</figcaption></figure>
+            <div class="intimacy__words"><p class="intimacy__eyebrow">QUÍMICA + AFETO + LIBERDADE</p><h3>Viver o desejo.<br>Cuidar do encontro.</h3><p>O frio na barriga, o beijo, o carinho e a intimidade sexual têm lugar aqui. Para quem deseja, sexo e amor podem fazer parte de uma vida com mais prazer e conexão.</p><p>A intensidade combina com os três princípios quando as pessoas escolhem vivê-los juntas:</p></div>
+          </div>
+          <div class="intimacy__values">
+            <article class="intimacy__value--honor"><span aria-hidden="true">01 /</span><h3>Honra do casal</h3><p>Ser honesto sobre intenções, cumprir os acordos da relação e preservar a dignidade de cada cônjuge ou parceiro.</p></article>
+            <article><span aria-hidden="true">02 /</span><h3>Justiça</h3><p>Reconhecer a liberdade e o prazer de quem participa, com reciprocidade e sem pressão.</p></article>
+            <article><span aria-hidden="true">03 /</span><h3>Consciência</h3><p>Conversar sobre desejos e limites, escolher com clareza e respeitar o direito de parar ou mudar de ideia.</p></article>
+          </div>
+
+          <aside class="intimacy__honor" aria-labelledby="honor-title">
+            <p class="intimacy__eyebrow">O COMPROMISSO QUE SUSTENTA O ENCONTRO</p>
+            <h3 id="honor-title">A honra do casal começa com a dignidade de cada pessoa.</h3>
+            <p>Lealdade é respeitar os acordos escolhidos juntos. Cada cônjuge ou parceiro mantém sua autonomia, sua privacidade e seu direito de dizer sim, não ou mudar de ideia. Uma mudança nos combinados pede conversa e consentimento antes de acontecer.</p>
+            <p>Isso vale para casais heterossexuais, gays e lésbicos e para relações com pessoas bissexuais, trans e de outras identidades. Cada pessoa tem seu estilo; honestidade, cuidado e respeito têm o mesmo valor em todas essas relações.</p>
+          </aside>
+          <div class="intimacy__couples" role="group" aria-label="Diversidade de casais adultos">
+            <figure><img src="./assets/amor-casal-masculino-v1.webp" width="1659" height="948" loading="lazy" decoding="async" alt="Dois homens adultos fictícios, vestidos, de mãos dadas e em um abraço carinhoso em um jardim orbital."><figcaption><strong>Casais gays</strong><span>Companheirismo, desejo e compromisso, com liberdade para cada pessoa expressar seu estilo.</span></figcaption></figure>
+            <figure><img src="./assets/amor-casal-feminino-v1.webp" width="1672" height="941" loading="lazy" decoding="async" alt="Duas mulheres adultas fictícias, vestidas, compartilham um beijo suave e mantêm as mãos unidas em uma varanda orbital."><figcaption><strong>Casais lésbicos</strong><span>Carinho, química e reciprocidade, com a mesma dignidade e o mesmo cuidado com os acordos.</span></figcaption></figure>
+          </div>
+          <div class="intimacy__modern">
+            <h3>Relacionamentos modernos. Acordos que fazem sentido para vocês.</h3>
+            <p>Namoro, casamento, relação à distância, monogamia ou outros acordos consensuais entre adultos: o modelo é escolhido pelas pessoas envolvidas. Exclusividade combinada merece ser respeitada; outros arranjos exigem transparência e consentimento de todas as pessoas afetadas.</p>
+            <div class="intimacy__agreements">
+              <article><h4>Conversem antes</h4><p>Desejos, limites, exclusividade e privacidade podem ser colocados em palavras, com espaço real para discordar e recusar.</p></article>
+              <article><h4>Vivam a ousadia combinada</h4><p>Flerte, beijo, dança, música, mensagens carinhosas e fantasias conversadas são possibilidades para um encontro desejado por ambos, sem pressão.</p></article>
+              <article><h4>Cuidem também depois</h4><p>Escutem como cada um se sentiu, revisem os combinados e protejam a privacidade das mensagens e imagens íntimas. Compartilhar exige autorização específica de quem aparece.</p></article>
+            </div>
+          </div>
+          <div class="intimacy__closing"><p>Um encontro a dois, música, conversa sem pressa, carinho e espaço para descobrir o que ambos desejam. Diversão sem álcool, com presença de verdade.</p><a href="./index.html#conviver">Ver os princípios de cuidado e consentimento <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </details>
+      </div>
+    </section>
+
     <!-- ===================== REAVERSO ===================== -->
     <section class="section" id="reaverso">
       <div class="wrap">
@@ -591,7 +667,7 @@ Não recomende liquidar patrimônio ou assumir dívidas para seguir o projeto. N
     </section>
   </main>
 
-  <div class="meander" aria-hidden="true"></div>
+  <div class="orbit-divider" aria-hidden="true">360X · CONTINUE EXPLORANDO</div>
   <footer class="footer">
     <div class="wrap">
       <div class="footer__grid">
@@ -625,6 +701,6 @@ Não recomende liquidar patrimônio ou assumir dívidas para seguir o projeto. N
     </div>
   </footer>
 
-  <script src="./app.js" defer></script>
+  <script src="./app.js?v=orbital-20261018-3" defer></script>
 </body>
 </html>
