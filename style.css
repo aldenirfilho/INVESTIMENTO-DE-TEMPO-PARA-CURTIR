@@ -498,3 +498,23 @@ fieldset { border: 0; min-width: 0; }
   .intimacy__seal { width: 40px; height: 40px; font-size: .65rem; }
   .intimacy__values { gap: 12px; }
 }
+/* Honra e diversidade: o mesmo cuidado para cada casal. */
+.intimacy__values .intimacy__value--honor { border-color: #b8899d; background: #f1b1c60a; }
+.intimacy__honor { margin-top: 28px; padding: 28px; border-left: 3px solid var(--intimacy-accent); border-radius: 0 10px 10px 0; background: #f1b1c60b; }
+.intimacy__honor h3 { margin-bottom: 16px; max-width: 38ch; font: 600 clamp(1.4rem, 2.3vw, 2rem)/1.2 var(--font-display); letter-spacing: -.03em; }
+.intimacy__honor > p:not(.intimacy__eyebrow) { color: var(--color-text-muted); font-size: .87rem; line-height: 1.9; max-width: 100ch; }
+.intimacy__honor > p + p { margin-top: 14px; }
+.intimacy__couples { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 28px; }
+.intimacy__couples figure { min-width: 0; border: 1px solid #f1b1c638; border-radius: 10px; overflow: hidden; background: #ffffff04; }
+.intimacy__couples img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.intimacy__couples figcaption { padding: 20px; max-width: none; }
+.intimacy__couples figcaption strong { display: block; margin-bottom: 8px; font: 600 1.15rem/1.4 var(--font-display); }
+.intimacy__couples figcaption span { display: block; font-size: .8rem; color: var(--color-text-muted); line-height: 1.8; }
+.intimacy__modern { margin-top: 32px; }
+.intimacy__modern > h3 { font: 600 1.4rem/1.3 var(--font-display); letter-spacing: -.025em; margin-bottom: 16px; }
+.intimacy__modern > p { color: var(--color-text-muted); font-size: .87rem; line-height: 1.9; max-width: 100ch; }
+.intimacy__agreements { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 24px; }
+.intimacy__agreements article { padding-top: 20px; border-top: 1px solid #f1b1c638; }
+.intimacy__agreements h4 { font: 600 1rem/1.4 var(--font-display); margin-bottom: 10px; }
+.intimacy__agreements p { color: var(--color-text-muted); font-size: .8rem; line-height: 1.8; }
+@media (max-width: 720px) { .intimacy__couples, .intimacy__agreements { grid-template-columns: minmax(0, 1fr); } .intimacy__honor { padding: 22px; } }

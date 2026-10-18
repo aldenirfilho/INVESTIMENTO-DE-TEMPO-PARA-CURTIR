@@ -82,7 +82,7 @@ Reestilização de 18/10/2026: grafite, lima e ciano; tipografia Space Grotesk/M
 
 ![Coleção Turbo TEMI 360X](docs/preview-orbital/colecao-10-imagens.png)
 
-A revisão visual humana, a experiência em dispositivos reais e o comportamento após publicação no GitHub Pages permanecem pendentes. A branch da edição deve ser revisada antes do merge. Para reverter, reverta o commit da edição orbital e restaure os três arquivos anteriores (`index.html`, `style.css`, `app.js`); não há migração de dados.
+A direção visual foi aprovada para publicação em 18/10/2026. Testes em dispositivos reais e leitores de tela continuam como verificações complementares. O resultado da publicação deve ser confirmado no histórico de implantação do GitHub Pages e no endereço público. Para reverter, reverta o commit da edição orbital e restaure os três arquivos anteriores (`index.html`, `style.css`, `app.js`); não há migração de dados.
 
 
 ## Espaço reservado — Amor & intimidade · 18+
@@ -94,4 +94,13 @@ A revisão visual humana, a experiência em dispositivos reais e o comportamento
 - A arte romântica apresenta casal adulto fictício, vestido, em abraço e beijo suave no cenário orbital. Os arquivos `assets/amor-intimidade-v1.webp` e `assets/amor-intimidade-v1.json` contêm a imagem e seu registro de geração/prompts; o PNG original é preservado localmente fora do versionamento público.
 - A coleção de 10 imagens e o ZIP anterior continuam separados deste complemento.
 
-Validação do complemento executada: HTMLParser verificou IDs, âncoras, assets, texto alternativo e estado inicialmente fechado nas duas páginas; hashes do WebP e original conferem. No navegador, Enter abre e Espaço fecha; a galeria aberta não apresentou overflow em 320, 390, 768 e 1280 px, e o complemento da principal foi conferido em 390 px. A arte carregou nas duas páginas. Revisão estática independente sem bloqueadores. Captura: `docs/preview-orbital/intimidade-aberta.png`. Homologação humana e publicação continuam pendentes.
+Validação do complemento executada: HTMLParser verificou IDs, âncoras, assets, texto alternativo e estado inicialmente fechado nas duas páginas; hashes do WebP e original conferem. No navegador, Enter abre e Espaço fecha; a galeria aberta não apresentou overflow em 320, 390, 768 e 1280 px, e o complemento da principal foi conferido em 390 px. A arte carregou nas duas páginas. Revisão estática independente sem bloqueadores. Captura: `docs/preview-orbital/intimidade-aberta.png`. Aprovação para publicação recebida em 18/10/2026; a confirmação do deploy depende do GitHub Pages e da leitura do endereço público.
+
+
+### Honra do casal e relacionamentos modernos
+
+A seção 18+ destaca a dignidade de cada cônjuge ou parceiro, lealdade aos acordos, consentimento prévio para mudanças e privacidade de mensagens/imagens. Inclui explicitamente casais heterossexuais, gays e lésbicos e relações com pessoas bi, trans e de outras identidades, sem associar orientação sexual a práticas ou estilos fixos. Aborda namoro, casamento, relações à distância, monogamia e outros acordos consensuais entre adultos, com espaço para recusar.
+
+Duas artes românticas adicionais de casais adultos fictícios estão em `assets/amor-casal-masculino-v1.webp` e `assets/amor-casal-feminino-v1.webp`, com os respectivos manifestos de prompts, dimensões e hashes. Pessoas vestidas, afeto e nenhuma representação sexual explícita; originais PNG preservados localmente. A coleção original de dez imagens e seu ZIP permanecem íntegros e separados desses complementos.
+
+Validação desta inclusão: HTMLParser aprovou IDs, âncoras, alt e dimensões dos arquivos nas duas páginas; os blocos de intimidade coincidem; todos os hashes/bytes dos novos manifestos foram conferidos na revisão independente. `node --check app.js` e `git diff --check` passaram. A galeria com a seção aberta ficou sem overflow em 320, 390, 768 e 1280 px, com uma coluna para os casais no celular e duas no desktop. As três artes românticas carregaram. Os dez WebPs e o ZIP originais foram conferidos por hash/CRC, sem mudança. O CSS e o JavaScript receberam URLs versionadas para a edição orbital, evitando uso de versões anteriores em cache. Comparação visual adicional: `docs/preview-orbital/honra-diversidade.png`.

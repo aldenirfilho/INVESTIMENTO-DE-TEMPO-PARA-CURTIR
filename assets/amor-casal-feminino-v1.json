@@ -1,0 +1,19 @@
+{
+  "title": "Amor entre mulheres · honra e reciprocidade",
+  "version": 1,
+  "generator": "built-in image_gen",
+  "use_case": "stylized-concept",
+  "prompt": "Use case: stylized-concept.\nAsset type: premium cinematic website image, widescreen 16:9.\nPrimary request: affectionate fictional adult female couple honoring their bond, realistic cinematic editorial concept art for the \"Turbo TEMI 360 X\" orbital lifestyle visual universe. No lettering.\nScene/backdrop: refined futuristic orbital terrace with transparent protective dome and a panoramic balcony, luminous Earth and elegant spacecraft architecture in the distance, graphite structure, cyan and warm amber lights with very subtle soft rose accents.\nSubjects: two fictional women clearly mature adults around 30-45 years. Distinct individual appearances and elegant personal styles: one with short natural curly dark hair, rich dark skin, wearing a modern deep navy tailored trouser suit over a tasteful white blouse; her partner with shoulder-length auburn hair, light warm skin, wearing a stylish burgundy long evening dress with modest neckline. Both completely clothed. They share one gentle consensual closed-mouth kiss, their hands joined naturally, with relaxed reciprocal affectionate body language. Convey tenderness, commitment, equality, reciprocity and dignity; natural human anatomy.\nComposition/framing: medium-wide environmental portrait showing both comfortably from knees upward and the spectacular orbital panorama. Elegant, romantic, emotionally sincere; balanced with generous environment, not body-focused.\nLighting/mood: softly warm amber on faces, cyan rim lights, discreet rose highlights, premium youthful modern aerospace atmosphere.\nConstraints: adults only, no text, no logos, no watermark, no alcohol, no nudity, no sexual acts, no erotic body-part emphasis, no stereotypes. Intimacy only through a soft kiss and joined hands.",
+  "original": "output/artes-originais/amor-casal-feminino-v1.png",
+  "optimized": "assets/amor-casal-feminino-v1.webp",
+  "width": 1672,
+  "height": 941,
+  "original_bytes": 2338343,
+  "optimized_bytes": 295680,
+  "original_sha256": "2a4221b68add2c7935b40c494f8d462941d7f9dd0f8e6fc8c3609fb32e15b916",
+  "optimized_sha256": "9eec6892ab0e697c5310adc8bbf983cfe8bb0f43f589af34a66176868d1e8720",
+  "visual_review": {
+    "status": "inspected",
+    "notes": "PNG original e WebP inspecionados: duas mulheres fictícias adultas totalmente vestidas, beijo suave recíproco e mãos unidas, varanda orbital e Terra. Estilos pessoais individuais sem estereótipos. Sem texto, álcool, nudez ou conteúdo sexual explícito. Conversão WebP sem crop ou alteração de dimensões."
+  }
+}
