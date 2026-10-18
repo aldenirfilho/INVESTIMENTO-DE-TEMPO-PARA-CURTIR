@@ -297,6 +297,23 @@ fieldset { border: 0; min-width: 0; }
 .footer ul li + li { margin-top: 12px; }
 .footer__bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-top: 24px; margin-top: 40px;
   border-top: 1px solid var(--color-border); color: var(--color-text-faint); font-size: .7rem; }
+.site-credits { color: var(--color-text-muted); font-size: .75rem; line-height: 1.9; }
+.site-credits p { max-width: none; }
+.site-credits p + p { margin-top: 4px; }
+.site-credits__thanks { font-style: italic; }
+.social-share { border: 1px solid var(--color-border); border-radius: 12px; padding: 24px; margin-block: 28px; background: #0d1821; }
+.social-share h3 { font: 500 1.05rem/1.5 var(--font-display); margin-bottom: 6px; }
+.social-share__intro { color: var(--color-text-muted); font-size: .78rem; line-height: 1.8; }
+.social-share__links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.social-share__links .btn { gap: 8px; }
+.gallery-page .social-share__links .btn { margin-top: 0; }
+.social-share [hidden] { display: none !important; }
+.social-share__status { min-height: 1.8em; margin-top: 12px; color: var(--color-accent); font-size: .74rem; line-height: 1.8; }
+.social-share__fallback { margin-top: 12px; }
+.social-share__fallback label { display: block; color: var(--color-text-muted); font-size: .74rem; margin-bottom: 8px; }
+.social-share__fallback input { width: 100%; min-width: 0; padding: 12px; color: var(--color-text); background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 6px; font-size: .76rem; }
+.social-share noscript p { margin-top: 12px; font-size: .75rem; overflow-wrap: anywhere; }
+@media (max-width: 480px) { .social-share { padding: 18px; } .social-share__links .btn { flex: 1 1 120px; } }
 /* Static content stays visible, including without JavaScript. */
 .reveal { opacity: 1; transform: none; }
 /* Responsive controls and layout */
